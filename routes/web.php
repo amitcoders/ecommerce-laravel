@@ -16,9 +16,9 @@ use Illuminate\Support\Facades\Auth;
 */
 
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 
 Auth::routes();
 
@@ -60,3 +60,44 @@ Route::get('/admin/brand/active/{id}','Admin\BrandController@active')->name('bra
 
 Route::get('/admin/products/add','Admin\ProductController@index')->name('add.products');
 Route::post('/admin/products/store','Admin\ProductController@store')->name('store.products');
+Route::get('/admin/products/manage','Admin\ProductController@manageProduct')->name('manage-products');
+Route::get('/admin/products/edit/{id}','Admin\ProductController@editProduct')->name('edit.products');
+Route::post('/admin/products/update','Admin\ProductController@updateProduct')->name('update.products');
+Route::get('/admin/products/delete/{id}','Admin\ProductController@deleteProduct')->name('delete.products');
+Route::get('admin/products/inactive/{id}','Admin\ProductController@inactive')->name('products.inactive');
+Route::get('/admin/products/active/{id}','Admin\ProductController@active')->name('products.active');
+
+// coupon route start here 
+
+Route::get('/admin/coupon','Admin\CouponController@index')->name('admin.coupon');
+Route::post('/admin/coupon/store','Admin\CouponController@store')->name('coupon.store');
+Route::get('/admin/coupon/edit/{id}','Admin\CouponController@edit')->name('coupon.edit');
+Route::post('/admin/coupon/update','Admin\CouponController@update')->name('coupon.update');
+Route::get('/admin/coupon/delete/{id}','Admin\CouponController@delete')->name('coupon.delete');
+Route::get('admin/coupon/inactive/{id}','Admin\CouponController@inactive')->name('coupon.inactive');
+Route::get('/admin/coupon/active/{id}','Admin\CouponController@active')->name('coupon.active');
+
+// cart start here
+
+
+Route::post('/add/to-cart/{product_id}','CartController@addtocart')->name('add_to_cart');
+Route::get('/cart','CartController@cartpage')->name('cart.index');
+Route::get('/cart/remove/{cart_id}','CartController@destroy')->name('cart.destroy');
+Route::post('/cart/quantity/update/{cart_id}','CartController@quantityupdate')->name('cart.quantity.update');
+Route::post('/cart/coupon/apply','CartController@applycoupon')->name('cart.coupon.apply');
+Route::get('/coupon-remove','CartController@couponremove')->name('coupon_remove');
+
+// wishlist
+
+Route::get('/add/to-wishlist/{product_id}','WishlistController@addtowishlist')->name('add_to_wishlist');
+Route::get('/wishlist','WishlistController@wishlistpage')->name('wishlist.index');
+Route::get('/wishlist/destroy/{wishlist_id}','WishlistController@destroy')->name('wishlist.destroy');
+
+// product details
+
+Route::get('/product/details/{product_id}','FontendController@productdetails')->name('product.details');
+
+// checkout page
+Route::get('/checkout','CheckoutController@index')->name('checkout.index');
+Route::post('/place/order','OrderController@storeOrder')->name('place-order');
+Route::get('/order/success','OrderController@orderSuccess')->name('order_success');

@@ -1,9 +1,17 @@
-@extends('layouts.app')
+@extends('layouts.front_end_index')
 
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
+        @if(session('loginError'))
+                <div class="alert alert-success alert-dismissible fade show" role="alert">
+                    <strong>{{session('loginError')}}</strong>
+                    <button type="button" class="close" data-dismiss="alert" aria-label="close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                @endif
             <div class="card">
                 <div class="card-header">{{ __('User Login') }}</div>
 

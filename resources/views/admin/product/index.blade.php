@@ -12,7 +12,7 @@
         <div class="row row-sm">
             <div class="card pd-20 pd-sm-40">
                 <h6 class="card-body-title">Add New Product</h6>
-                <form action="{{ route('store.products')}}" method="POST">
+                <form action="{{ route('store.products')}}" method="POST" enctype="multipart/form-data">
                     @csrf
                     <div class="form-layout">
                         <div class="row mg-b-25">

@@ -22,6 +22,7 @@ class CreateProductsTable extends Migration
             $table->string('product_code');
             $table->string('product_quantity');
             $table->text('short_description');
+            $table->text('long_description');
             $table->integer('price');
             $table->string('image_one');
             $table->string('image_two');

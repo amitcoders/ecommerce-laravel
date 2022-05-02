@@ -93,56 +93,26 @@
             {{-- <i class="menu-item-arrow fa fa-angle-down"></i> --}}
           </div><!-- menu-item -->
         </a><!-- sl-menu-link -->
-        <a href="{{ route('add.products')}}" class="sl-menu-link">
-          <div class="sl-menu-item">
-            <i class="menu-item-icon ion-ios-pie-outline tx-20"></i>
-            <span class="menu-item-label">Products</span>
-            {{-- <i class="menu-item-arrow fa fa-angle-down"></i> --}}
-          </div><!-- menu-item -->
-        </a><!-- sl-menu-link -->
-        {{-- <a href="{{ route('products.index')}}" class="sl-menu-link">
-            <div class="sl-menu-item">
-              <i class="menu-item-icon ion-ios-pie-outline tx-20"></i>
-              <span class="menu-item-label">Product</span>
-              <i class="menu-item-arrow fa fa-angle-down"></i>
-            </div><!-- menu-item -->
-          </a><!-- sl-menu-link -->
-
+        
+        
         <a href="#" class="sl-menu-link">
           <div class="sl-menu-item">
             <i class="menu-item-icon icon ion-ios-gear-outline tx-24"></i>
-            <span class="menu-item-label">Forms</span>
+            <span class="menu-item-label">Products</span>
             <i class="menu-item-arrow fa fa-angle-down"></i>
           </div><!-- menu-item -->
         </a><!-- sl-menu-link -->
         <ul class="sl-menu-sub nav flex-column">
-          <li class="nav-item"><a href="form-elements.html" class="nav-link">Form Elements</a></li>
-          <li class="nav-item"><a href="form-layouts.html" class="nav-link">Form Layouts</a></li>
-          <li class="nav-item"><a href="form-validation.html" class="nav-link">Form Validation</a></li>
-          <li class="nav-item"><a href="form-wizards.html" class="nav-link">Form Wizards</a></li>
-          <li class="nav-item"><a href="form-editor-text.html" class="nav-link">Text Editor</a></li>
+          <li class="nav-item"><a href="{{ route('add.products')}}" class="nav-link">Add Products</a></li>
+          <li class="nav-item"><a href="{{ route('manage-products')}}" class="nav-link">Manage Products</a></li>
+          
         </ul>
-        <a href="#" class="sl-menu-link">
+        <a href="{{ route('admin.coupon')}}" class="sl-menu-link">
           <div class="sl-menu-item">
-            <i class="menu-item-icon icon ion-ios-filing-outline tx-24"></i>
-            <span class="menu-item-label">UI Elements</span>
-            <i class="menu-item-arrow fa fa-angle-down"></i>
+            <i class="menu-item-icon icon ion-ios-gear-outline tx-24"></i>
+            <span class="menu-item-label">Coupoun</span>
           </div><!-- menu-item -->
         </a><!-- sl-menu-link -->
-        <ul class="sl-menu-sub nav flex-column">
-          <li class="nav-item"><a href="accordion.html" class="nav-link">Accordion</a></li>
-          <li class="nav-item"><a href="alerts.html" class="nav-link">Alerts</a></li>
-          <li class="nav-item"><a href="buttons.html" class="nav-link">Buttons</a></li>
-          <li class="nav-item"><a href="cards.html" class="nav-link">Cards</a></li>
-          <li class="nav-item"><a href="icons.html" class="nav-link">Icons</a></li>
-          <li class="nav-item"><a href="modal.html" class="nav-link">Modal</a></li>
-          <li class="nav-item"><a href="navigation.html" class="nav-link">Navigation</a></li>
-          <li class="nav-item"><a href="pagination.html" class="nav-link">Pagination</a></li>
-          <li class="nav-item"><a href="popups.html" class="nav-link">Tooltip &amp; Popover</a></li>
-          <li class="nav-item"><a href="progress.html" class="nav-link">Progress</a></li>
-          <li class="nav-item"><a href="spinners.html" class="nav-link">Spinners</a></li>
-          <li class="nav-item"><a href="typography.html" class="nav-link">Typography</a></li>
-        </ul>
         <a href="#" class="sl-menu-link">
           <div class="sl-menu-item">
             <i class="menu-item-icon icon ion-ios-bookmarks-outline tx-20"></i>
@@ -183,7 +153,7 @@
           <li class="nav-item"><a href="page-signin.html" class="nav-link">Signin Page</a></li>
           <li class="nav-item"><a href="page-signup.html" class="nav-link">Signup Page</a></li>
           <li class="nav-item"><a href="page-notfound.html" class="nav-link">404 Page Not Found</a></li>
-        </ul> --}}
+        </ul>
       </div><!-- sl-sideleft-menu -->
 
       <br>
